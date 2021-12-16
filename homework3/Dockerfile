@@ -1,5 +1,5 @@
 FROM nginx
-RUN apt update -y && apt install python3
+RUN apt-get update && apt -y install python3
 WORKDIR /app
 COPY . .
 RUN python3 gen_html.py
